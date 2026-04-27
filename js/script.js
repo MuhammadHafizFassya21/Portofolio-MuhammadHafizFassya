@@ -402,7 +402,7 @@ const projectData = {
       'Educational Dashboard with model metrics'
     ],
     tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'Scikit-learn', 'Recharts'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://gerd-svc.vercel.app/',
     isLiveDemo: true,
     screenshots: ['images/gerd clasification.PNG'],
@@ -440,7 +440,7 @@ const projectData = {
       'Adaptive Expertise Tracking skill radar'
     ],
     tech: ['Next.js 15+', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'Framer Motion', 'Recharts'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     screenshots: ['images/data engineer study planner.PNG'],
     architecture: {
       diagram: [
@@ -477,7 +477,7 @@ const projectData = {
       'Dukungan Dark Mode'
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Firebase Firestore', 'Firebase Auth'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     screenshots: ['images/catatan kuliah.PNG'],
     architecture: {
       diagram: [
@@ -513,7 +513,7 @@ const projectData = {
       'Intelligent Trend Insights & Forecasting Alerts'
     ],
     tech: ['Python', 'Streamlit', 'SQL', 'Pandas', 'ETL', 'Data Warehouse'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://hafiz-data-engine-n7jwztnazaaledhqnudnx.streamlit.app',
     isLiveDemo: true,
     screenshots: [
@@ -557,7 +557,7 @@ const projectData = {
       'Advanced Multivariate Support'
     ],
     tech: ['Python', 'PyTorch', 'HuggingFace', 'Transformers'],
-    github: 'https://github.com/wanhangerrrr/chronos-forecast',
+    github: 'https://github.com/MuhammadHafizFassya21/chronos-forecast',
     demo: null,
     isSimulator: false,
     screenshots: ['images/chronos1.PNG'],
@@ -590,7 +590,7 @@ const projectData = {
       'Performance metrics dashboard for model evaluation'
     ],
     tech: ['Python', 'XGBoost', 'Pandas', 'Scikit-learn', 'Matplotlib'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: null,
     isSimulator: true,
     architecture: {
@@ -628,7 +628,7 @@ const projectData = {
       'End-to-end Encrypted Note Storage'
     ],
     tech: ['React Native', 'TypeScript', 'Node.js', 'OpenAI SDK', 'Firebase Firestore'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: null,
     architecture: {
       diagram: [
@@ -663,7 +663,7 @@ const projectData = {
       'Offline-capable model for field use'
     ],
     tech: ['TensorFlow', 'MobileNetV2', 'Keras', 'Flutter'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: null,
     architecture: {
       diagram: [
@@ -697,7 +697,7 @@ const projectData = {
       'Sales analytics dashboard'
     ],
     tech: ['Flutter', 'Dart', 'Firebase', 'SQLite'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: null,
     isLiveDemo: true,
     architecture: {
@@ -731,7 +731,7 @@ const projectData = {
       'Disease information and treatment recommendations'
     ],
     tech: ['HTML', 'Tailwind CSS', 'JavaScript', 'TensorFlow.js'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: null,
     architecture: {
       diagram: [
@@ -764,7 +764,7 @@ const projectData = {
       'Data export to CSV'
     ],
     tech: ['Flutter', 'Dart', 'Firebase', 'Provider'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: null,
     isCrudSimulator: true,
     architecture: {
@@ -798,7 +798,7 @@ const projectData = {
       'Project engagement metrics'
     ],
     tech: ['JavaScript', 'Tailwind CSS', 'Node.js'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://dashboard-portofolio-ten.vercel.app/dashboard',
     architecture: {
       diagram: [
@@ -833,7 +833,7 @@ const projectData = {
       'Time-Series Filtering (7-Day & 30-Day Windows)'
     ],
     tech: ['Google Gemini API', 'Node.js Serverless', 'GitHub REST API', 'Cyberpunk UI', 'JSON-LD'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'ai-career.html',
     architecture: {
       diagram: [
@@ -868,7 +868,7 @@ const projectData = {
       'Premium hover effects & micro-interactions'
     ],
     tech: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://aurev-store.vercel.app/',
     isLiveDemo: true,
     architecture: {
@@ -909,7 +909,7 @@ const projectData = {
       'High-performance UI with smooth transitions'
     ],
     tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://ramadhan-plan.vercel.app/',
     isLiveDemo: true,
     architecture: {
@@ -948,7 +948,7 @@ const projectData = {
       'Responsive design untuk semua perangkat'
     ],
     tech: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://website-desa-srimahi.vercel.app/',
     isLiveDemo: true,
     architecture: {
@@ -986,7 +986,7 @@ const projectData = {
       'Animasi smooth dan interaktif'
     ],
     tech: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://summary-portofolio.vercel.app/',
     isLiveDemo: true,
     architecture: {
@@ -1024,7 +1024,7 @@ const projectData = {
       'Preview dan download hasil clip'
     ],
     tech: ['React', 'Tailwind CSS', 'AI Video API', 'Vercel'],
-    github: 'https://github.com/wanhangerrrr',
+    github: 'https://github.com/MuhammadHafizFassya21',
     demo: 'https://clip-video-by-fiz.vercel.app/',
     isLiveDemo: true,
     architecture: {

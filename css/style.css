@@ -4931,3 +4931,35 @@ background: radial-gradient(circle, rgba(0, 255, 136, 0.08) 0%, transparent 70%)
 }
 
 */
+
+/* ProjectLab CTA */
+.projectlab-cta-wrapper {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.projectlab-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0b0f14;
+  color: #00ff88;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.projectlab-cta:hover {
+  transform: translateY(-2px);
+  background-color: #00ff88;
+  color: #0b0f14;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4), 0 0 30px rgba(0, 255, 136, 0.2);
+}

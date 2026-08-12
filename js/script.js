@@ -1352,6 +1352,7 @@ const translations = {
       projects: "Projects",
       certificates: "Certificates",
       contact: "Contact",
+      experience: "Experience",
       dashboard: "Dashboard Activity",
       hiring: "Technical Summary"
     },
@@ -1367,10 +1368,12 @@ const translations = {
       education: "Education",
       projects: "Projects",
       certificates: "Certificates",
+      experience: "Experience",
       contact: "Contact Me"
     },
     text: {
       skills: "Tools I use for data, engineering, and ML projects.",
+      experience: "My career path and work experiences.",
       about1: "I am an Informatics student specializing in Data Science and Data Engineering. My main interest is building efficient, structured data processing systems that provide measurable insights.",
       about2: "I have worked on various projects involving machine learning, data classification, and web/mobile application development. I am accustomed to working with Python, SQL, and data analysis tools to turn raw data into implementable solutions.",
       about3: "My current focus is deepening my skills in data engineering, model optimization, and building scalable, production-ready systems.",
@@ -1693,6 +1696,7 @@ const translations = {
       projects: "Proyek",
       certificates: "Sertifikat",
       contact: "Kontak",
+      experience: "Pengalaman",
       dashboard: "Dashboard Activity",
       hiring: "Ringkasan Teknis",
       principles: "Prinsip Engineering"
@@ -1709,10 +1713,12 @@ const translations = {
       education: "Pendidikan",
       projects: "Proyek",
       certificates: "Sertifikat",
+      experience: "Pengalaman",
       contact: "Hubungi Saya"
     },
     text: {
       skills: "Alat yang saya gunakan untuk proyek data, engineering, dan ML.",
+      experience: "Perjalanan karir dan pengalaman kerja yang telah saya jalani.",
       about1: "Saya merupakan mahasiswa Informatika dengan spesialisasi pada Data Science dan Data Engineering. Minat utama saya adalah membangun sistem pengolahan data yang efisien, terstruktur, dan dapat memberikan insight yang terukur.",
       about2: "Saya telah mengerjakan berbagai proyek yang melibatkan machine learning, klasifikasi data, serta pengembangan aplikasi berbasis web dan mobile. Saya terbiasa bekerja dengan Python, SQL, serta tools analisis data untuk mengubah raw data menjadi solusi yang dapat diimplementasikan.",
       about3: "Fokus saya saat ini adalah memperdalam kemampuan dalam data engineering, optimasi model, serta membangun sistem yang scalable dan production-ready.",

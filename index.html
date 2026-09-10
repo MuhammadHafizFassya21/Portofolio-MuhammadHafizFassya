@@ -158,15 +158,7 @@
             class="fas fa-user-tie text-base w-5 text-center group-hover:scale-110 transition-transform relative z-10"></i>
           <span class="font-medium md:hidden lg:inline relative z-10" data-i18n="nav.hiring">Technical Summary</span>
         </a>
-        <a href="#engineering-principles"
-          class="nav-item flex items-center gap-3 px-3 py-1.5 rounded-xl text-[13px] text-[#94a3b8] hover:bg-[#1a1f2e] hover:text-[#00ff88] transition-all duration-200 group relative overflow-hidden">
-          <div
-            class="absolute left-0 top-0 bottom-0 w-1 bg-[#00ff88] opacity-0 group-hover:opacity-100 transition-opacity">
-          </div>
-          <i class="fas fa-cogs text-base w-5 text-center group-hover:scale-110 transition-transform relative z-10"></i>
-          <span class="font-medium md:hidden lg:inline relative z-10" data-i18n="nav.principles">Engineering
-            Principles</span>
-        </a>
+
         <a href="#contact"
           class="nav-item flex items-center gap-3 px-3 py-1.5 rounded-xl text-[13px] text-[#94a3b8] hover:bg-[#1a1f2e] hover:text-[#00ff88] transition-all duration-200 group relative overflow-hidden">
           <div
@@ -287,12 +279,6 @@
                 </path>
               </svg>
             </a>
-
-            <!-- AI Advisor Button -->
-            <a href="ai-career.html" class="btn btn-ai-advisor">
-              <i class="fas fa-sparkles"></i>
-              <span>AI Advisor</span>
-            </a>
           </div>
 
           <!-- Social Links -->
@@ -316,6 +302,9 @@
               </a>
               <a href="https://youtube.com/@muhammadhafizfassya?si=Df9CeSxGicrfy6oE" target="_blank">
                 <i class="fab fa-youtube"></i>
+              </a>
+              <a href="https://www.kaggle.com/muhammadhafizfassya" target="_blank" class="kaggle" title="Kaggle">
+                <i class="fab fa-kaggle"></i>
               </a>
             </div>
           </div>
@@ -3000,145 +2989,7 @@
       </div>
     </section>
 
-    <!-- Engineering Operating Principles Section -->
-    <section id="engineering-principles" class="py-24 relative overflow-hidden">
-      <!-- Background Elements -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-[#00ff88]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16">
-          <h2 class="section-title text-3xl md:text-4xl font-bold text-[#f8fafc] mb-4"
-            style="font-family: 'Poppins', sans-serif;" data-i18n="principles.title">
-            Engineering Operating Principles
-          </h2>
-          <p class="text-[#94a3b8] max-w-2xl mx-auto" data-i18n="principles.subtitle">
-            How I approach building production-ready systems
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <!-- Principle 1 -->
-          <div
-            class="group p-6 rounded-xl border border-[#334155]/50 bg-[#0b0f14]/80 hover:border-[#00ff88]/50 transition-all duration-300 hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#00ff88]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00ff88]/20 transition-colors">
-                <i class="fas fa-eye text-[#00ff88]"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[#f8fafc] mb-2 group-hover:text-[#00ff88] transition-colors"
-                  data-i18n="principles.items.observability.title">
-                  I Design for Observability
-                </h3>
-                <p class="text-sm text-[#94a3b8] leading-relaxed" data-i18n="principles.items.observability.desc">
-                  I track logs, metrics, and system states to make debugging predictable.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Principle 2 -->
-          <div
-            class="group p-6 rounded-xl border border-[#334155]/50 bg-[#0b0f14]/80 hover:border-[#00ff88]/50 transition-all duration-300 hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#00ff88]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00ff88]/20 transition-colors">
-                <i class="fas fa-shield-alt text-[#00ff88]"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[#f8fafc] mb-2 group-hover:text-[#00ff88] transition-colors"
-                  data-i18n="principles.items.validate.title">
-                  I Validate Before I Trust
-                </h3>
-                <p class="text-sm text-[#94a3b8] leading-relaxed" data-i18n="principles.items.validate.desc">
-                  Data quality checks and schema validation come before downstream usage.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Principle 3 -->
-          <div
-            class="group p-6 rounded-xl border border-[#334155]/50 bg-[#0b0f14]/80 hover:border-[#00ff88]/50 transition-all duration-300 hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#00ff88]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00ff88]/20 transition-colors">
-                <i class="fas fa-chart-line text-[#00ff88]"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[#f8fafc] mb-2 group-hover:text-[#00ff88] transition-colors"
-                  data-i18n="principles.items.measure.title">
-                  I Optimize After Measuring
-                </h3>
-                <p class="text-sm text-[#94a3b8] leading-relaxed" data-i18n="principles.items.measure.desc">
-                  Performance decisions are driven by metrics, not assumptions.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Principle 4 -->
-          <div
-            class="group p-6 rounded-xl border border-[#334155]/50 bg-[#0b0f14]/80 hover:border-[#00ff88]/50 transition-all duration-300 hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#00ff88]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00ff88]/20 transition-colors">
-                <i class="fas fa-undo text-[#00ff88]"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[#f8fafc] mb-2 group-hover:text-[#00ff88] transition-colors"
-                  data-i18n="principles.items.failure.title">
-                  I Handle Failure Explicitly
-                </h3>
-                <p class="text-sm text-[#94a3b8] leading-relaxed" data-i18n="principles.items.failure.desc">
-                  Systems include controlled error handling and retry logic.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Principle 5 -->
-          <div
-            class="group p-6 rounded-xl border border-[#334155]/50 bg-[#0b0f14]/80 hover:border-[#00ff88]/50 transition-all duration-300 hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#00ff88]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00ff88]/20 transition-colors">
-                <i class="fas fa-code text-[#00ff88]"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[#f8fafc] mb-2 group-hover:text-[#00ff88] transition-colors"
-                  data-i18n="principles.items.clarity.title">
-                  I Prefer Clarity Over Complexity
-                </h3>
-                <p class="text-sm text-[#94a3b8] leading-relaxed" data-i18n="principles.items.clarity.desc">
-                  Readable architecture and maintainability come before clever shortcuts.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Principle 6 -->
-          <div
-            class="group p-6 rounded-xl border border-[#334155]/50 bg-[#0b0f14]/80 hover:border-[#00ff88]/50 transition-all duration-300 hover:-translate-y-1">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#00ff88]/10 flex items-center justify-center shrink-0 group-hover:bg-[#00ff88]/20 transition-colors">
-                <i class="fas fa-project-diagram text-[#00ff88]"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-[#f8fafc] mb-2 group-hover:text-[#00ff88] transition-colors"
-                  data-i18n="principles.items.systems.title">
-                  I Think in Systems, Not Scripts
-                </h3>
-                <p class="text-sm text-[#94a3b8] leading-relaxed" data-i18n="principles.items.systems.desc">
-                  I design for lifecycle, scalability, and long-term reliability.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact py-24">
@@ -3338,6 +3189,8 @@
               class="fab fa-linkedin"></i></a>
           <a href="https://youtube.com/@muhammadhafizfassya?si=Df9CeSxGicrfy6oE" target="_blank"><i
               class="fab fa-youtube"></i></a>
+          <a href="https://www.kaggle.com/muhammadhafizfassya" target="_blank" class="kaggle" title="Kaggle"><i
+              class="fab fa-kaggle"></i></a>
           <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=mhafiz21032006@gmail.com" target="_blank"><i
               class="fas fa-envelope"></i></a>
         </div>

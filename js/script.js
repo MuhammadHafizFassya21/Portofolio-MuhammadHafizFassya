@@ -1642,36 +1642,7 @@ const translations = {
         whatsapp: "WhatsApp"
       }
     },
-    principles: {
-      title: "Engineering Operating Principles",
-      subtitle: "How I approach building production-ready systems",
-      items: {
-        observability: {
-          title: "I Design for Observability",
-          desc: "I track logs, metrics, and system states to make debugging predictable."
-        },
-        validate: {
-          title: "I Validate Before I Trust",
-          desc: "Data quality checks and schema validation come before downstream usage."
-        },
-        measure: {
-          title: "I Optimize After Measuring",
-          desc: "Performance decisions are driven by metrics, not assumptions."
-        },
-        failure: {
-          title: "I Handle Failure Explicitly",
-          desc: "Systems include controlled error handling and retry logic."
-        },
-        clarity: {
-          title: "I Prefer Clarity Over Complexity",
-          desc: "Readable architecture and maintainability come before clever shortcuts."
-        },
-        systems: {
-          title: "I Think in Systems, Not Scripts",
-          desc: "I design for lifecycle, scalability, and long-term reliability."
-        }
-      }
-    },
+
     target: {
       title: "Target Companies",
       subtitle: "Companies I’m aiming for after graduation (Data Engineer track).",
@@ -1698,8 +1669,7 @@ const translations = {
       contact: "Kontak",
       experience: "Pengalaman",
       dashboard: "Dashboard Activity",
-      hiring: "Ringkasan Teknis",
-      principles: "Prinsip Engineering"
+      hiring: "Ringkasan Teknis"
     },
     hero: {
       greeting: "Halo Semuanya",
@@ -2009,36 +1979,7 @@ const translations = {
         sd: "Sekolah Dasar (SD)"
       }
     },
-    principles: {
-      title: "Prinsip Operasional Engineering",
-      subtitle: "Pendekatan saya dalam membangun sistem siap produksi",
-      items: {
-        observability: {
-          title: "Desain untuk Observabilitas",
-          desc: "Saya melacak log, metrik, dan status sistem agar debugging lebih terprediksi."
-        },
-        validate: {
-          title: "Validasi Sebelum Percaya",
-          desc: "Pemeriksaan kualitas data dan validasi skema dilakukan sebelum penggunaan lebih lanjut."
-        },
-        measure: {
-          title: "Optimasi Setelah Pengukuran",
-          desc: "Keputusan performa didasarkan pada metrik, bukan asumsi tebakan."
-        },
-        failure: {
-          title: "Tangani Kegagalan secara Eksplisit",
-          desc: "Sistem mencakup penanganan error terkontrol dan logika retry."
-        },
-        clarity: {
-          title: "Kejelasan di Atas Kompleksitas",
-          desc: "Arsitektur yang mudah dibaca dan maintainability lebih utama daripada shortcut cerdas."
-        },
-        systems: {
-          title: "Berpikir Sistem, Bukan Sekadar Skrip",
-          desc: "Saya merancang untuk siklus hidup, skalabilitas, dan keandalan angka panjang."
-        }
-      }
-    },
+
     target: {
       title: "Perusahaan Target",
       subtitle: "Perusahaan yang saya tuju setelah lulus (Jalur Data Engineer).",

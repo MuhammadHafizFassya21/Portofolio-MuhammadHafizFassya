@@ -460,6 +460,28 @@ body::after {
     0 0 60px rgba(255, 0, 0, 0.4);
 }
 
+/* Kaggle */
+.social-icons a:nth-child(7),
+.social-icons a.kaggle {
+  box-shadow: 0 0 20px rgba(32, 190, 255, 0.4),
+    0 0 40px rgba(32, 190, 255, 0.2),
+    inset 0 0 15px rgba(32, 190, 255, 0.1);
+  border: 1px solid rgba(32, 190, 255, 0.4);
+}
+
+.social-icons a:nth-child(7)::before,
+.social-icons a.kaggle::before {
+  background: linear-gradient(45deg, #20BEFF, #008ABC);
+}
+
+.social-icons a:nth-child(7):hover,
+.social-icons a.kaggle:hover {
+  background: #20BEFF;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(32, 190, 255, 0.6),
+    0 0 60px rgba(32, 190, 255, 0.4);
+}
+
 /* ===== Hero Image ===== */
 .hero-image {
   display: flex;
@@ -3172,10 +3194,29 @@ body::after {
   background: linear-gradient(45deg, #EA4335, #c5221f);
 }
 
-.footer-social a:nth-child(5):hover {
+.footer-social a:nth-child(6):hover {
   background: #EA4335;
   box-shadow: 0 0 30px rgba(234, 67, 53, 0.6),
     0 0 60px rgba(234, 67, 53, 0.4);
+}
+
+/* Kaggle */
+.footer-social a.kaggle {
+  box-shadow: 0 0 20px rgba(32, 190, 255, 0.4),
+    0 0 40px rgba(32, 190, 255, 0.2),
+    inset 0 0 15px rgba(32, 190, 255, 0.1);
+  border: 1px solid rgba(32, 190, 255, 0.4);
+}
+
+.footer-social a.kaggle::before {
+  background: linear-gradient(45deg, #20BEFF, #008ABC);
+}
+
+.footer-social a.kaggle:hover {
+  background: #20BEFF;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(32, 190, 255, 0.6),
+    0 0 60px rgba(32, 190, 255, 0.4);
 }
 
 /* ===== Button CV Styles ===== */
@@ -3220,38 +3261,7 @@ body::after {
   box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
 }
 
-/* AI Advisor Button - Premium Effect */
-.btn-ai-advisor {
-  position: relative !important;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
-  color: #00ff88 !important;
-  border: 1px solid rgba(0, 255, 136, 0.4) !important;
-  overflow: visible !important;
-  /* Allow badge to overflow */
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  padding: 12px 25px !important;
-  font-weight: 700 !important;
-  z-index: 10;
-}
 
-.btn-ai-advisor:hover {
-  transform: translateY(-4px) scale(1.03) !important;
-  border-color: #00ff88 !important;
-  color: #fff !important;
-  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3),
-    0 0 20px rgba(0, 255, 136, 0.2);
-}
-
-.btn-ai-advisor i {
-  color: #00ff88 !important;
-  font-size: 0.9rem;
-  margin-right: 8px;
-  filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.5));
-}
-
-.btn-ai-advisor:hover i {
-  animation: sparkle-rotate 0.6s ease-in-out;
-}
 
 @keyframes sparkle-rotate {
   0% {
@@ -4079,29 +4089,7 @@ html {
   scrollbar-width: none;
 }
 
-/* ===== AI Advisor Nav Button (scoped) ===== */
-.nav-link.ai-advisor-btn {
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(168, 85, 247, 0.15));
-  border: 1px solid rgba(0, 240, 255, 0.3);
-  color: #00f0ff !important;
-  font-weight: 600;
-  position: relative;
-  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-}
 
-.nav-link.ai-advisor-btn:hover {
-  border-color: rgba(0, 240, 255, 0.6);
-  box-shadow: 0 0 14px rgba(0, 240, 255, 0.25);
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.22), rgba(168, 85, 247, 0.22));
-  color: #00f0ff !important;
-}
-
-.nav-link.ai-advisor-btn.active {
-  background: linear-gradient(135deg, #00f0ff, #a855f7) !important;
-  color: #000 !important;
-  border-color: transparent;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-}
 
 /* ===== SKILLS: TRUE INFINITE MARQUEE (LOCKED) ===== */
 .skills-marquee {

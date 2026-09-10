@@ -319,34 +319,7 @@ if (fadeItems.length) {
 }
 
 
-// ===== Live Clock =====
-function updateClock() {
-  const clockEls = document.querySelectorAll('.digital-clock');
-  const dateEls = document.querySelectorAll('.date-display');
 
-  if (clockEls.length === 0 && dateEls.length === 0) return;
-
-  const now = new Date();
-
-  // Time: 00:00:00
-  const timeStr = now.toLocaleTimeString('en-GB', { 
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit', 
-    hour12: false 
-  });
-  clockEls.forEach(el => el.textContent = timeStr);
-
-  // Date: MON, JAN 01
-  const dateStr = now.toLocaleDateString('en-US', { 
-    weekday: 'short', 
-    month: 'short', 
-    day: '2-digit' 
-  }).toUpperCase();
-  dateEls.forEach(el => el.textContent = dateStr);
-}
-setInterval(updateClock, 1000);
-updateClock(); // Initial call
 
 // ===== Projects Filter (New Tailwind Design) =====
 const filterBtns = document.querySelectorAll('.filter-btn');

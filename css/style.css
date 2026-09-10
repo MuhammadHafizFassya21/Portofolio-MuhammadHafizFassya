@@ -3825,10 +3825,7 @@ html {
   font-size: 1rem !important;
 }
 
-#live-clock {
-  font-size: 0.8rem !important;
-  padding: 3px 10px !important;
-}
+
 
 .navbar .container {
   max-width: 100% !important;
@@ -4683,11 +4680,7 @@ html {
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
   }
 
-  /* Fix Clock Position in Drawer */
-  #live-clock-container {
-    top: 1.25rem;
-    left: 1.25rem;
-  }
+
 
   /* --- Certificate Grid --- */
   .cert-grid {

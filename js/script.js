@@ -1324,6 +1324,8 @@ const translations = {
       education: "Education",
       projects: "Projects",
       certificates: "Certificates",
+      content: "Content & Media",
+      ambassador: "Campus Ambassador Content",
       contact: "Contact",
       experience: "Experience",
       dashboard: "Dashboard Activity",
@@ -1341,6 +1343,8 @@ const translations = {
       education: "Education",
       projects: "Projects",
       certificates: "Certificates",
+      content: "Content & Personal Branding",
+      ambassador: "Campus Ambassador",
       experience: "Experience",
       contact: "Contact Me"
     },
@@ -1639,6 +1643,8 @@ const translations = {
       education: "Pendidikan",
       projects: "Proyek",
       certificates: "Sertifikat",
+      content: "Konten & Media",
+      ambassador: "Campus Ambassador Content",
       contact: "Kontak",
       experience: "Pengalaman",
       dashboard: "Dashboard Activity",
@@ -1656,6 +1662,8 @@ const translations = {
       education: "Pendidikan",
       projects: "Proyek",
       certificates: "Sertifikat",
+      content: "Konten & Personal Branding",
+      ambassador: "Campus Ambassador",
       experience: "Pengalaman",
       contact: "Hubungi Saya"
     },
@@ -2981,3 +2989,77 @@ document.addEventListener('DOMContentLoaded', () => {
 window.runPipeline = runPipeline;
 window.resetPipeline = resetPipeline;
 window.pipelineState = pipelineState;
+
+// ===== Campus Ambassador Data & Interactive Filtering =====
+const ambassadorData = {
+  myskill: [
+    { src: 'images/hafiz.jpg', alt: 'MySkill Ambassador Content 1' },
+    { src: 'images/thehafz.jpeg', alt: 'MySkill Ambassador Content 2' },
+    { src: 'images/fiz.jpg', alt: 'MySkill Ambassador Content 3' },
+    { src: 'images/hafiz21.jpeg', alt: 'MySkill Ambassador Content 4' },
+    { src: 'images/AIinsight.JPG', alt: 'MySkill Ambassador Content 5' },
+    { src: 'images/data engineer study planner.PNG', alt: 'MySkill Ambassador Content 6' },
+    { src: 'images/sertifikat1.jpeg', alt: 'MySkill Ambassador Content 7' },
+    { src: 'images/sertifikat2.JPG', alt: 'MySkill Ambassador Content 8' }
+  ],
+  popsurvey: [
+    { src: 'images/srimahi.PNG', alt: 'PopSurvey Ambassador Content 1' },
+    { src: 'images/UMKM1.png', alt: 'PopSurvey Ambassador Content 2' },
+    { src: 'images/catatan kuliah.PNG', alt: 'PopSurvey Ambassador Content 3' },
+    { src: 'images/dashboardtraffic.JPG', alt: 'PopSurvey Ambassador Content 4' },
+    { src: 'images/hafiz.jpg', alt: 'PopSurvey Ambassador Content 5' },
+    { src: 'images/wanhanger.jpg', alt: 'PopSurvey Ambassador Content 6' },
+    { src: 'images/gerd clasification.PNG', alt: 'PopSurvey Ambassador Content 7' },
+    { src: 'images/hafiz21.jpeg', alt: 'PopSurvey Ambassador Content 8' }
+  ],
+  shopeepay: [
+    { src: 'images/thehafz.jpeg', alt: 'ShopeePay Ambassador Content 1' },
+    { src: 'images/DANA.jpg', alt: 'ShopeePay Ambassador Content 2' },
+    { src: 'images/BI.jpg', alt: 'ShopeePay Ambassador Content 3' },
+    { src: 'images/fiz.jpg', alt: 'ShopeePay Ambassador Content 4' },
+    { src: 'images/hafiz.jpg', alt: 'ShopeePay Ambassador Content 5' },
+    { src: 'images/aplikasidaun2.png', alt: 'ShopeePay Ambassador Content 6' },
+    { src: 'images/wanhanger.jpg', alt: 'ShopeePay Ambassador Content 7' },
+    { src: 'images/hafiz21.jpeg', alt: 'ShopeePay Ambassador Content 8' }
+  ]
+};
+
+function selectAmbassadorBrand(brandKey) {
+  // 1. Update brand buttons active state & indicator badges
+  document.querySelectorAll('.ambassador-brand-btn').forEach(btn => {
+    btn.classList.remove('active');
+    const badge = btn.querySelector('.brand-indicator');
+    if (badge) badge.classList.add('hidden');
+  });
+
+  const activeBtn = document.getElementById('btn-brand-' + brandKey);
+  if (activeBtn) {
+    activeBtn.classList.add('active');
+    const activeBadge = activeBtn.querySelector('.brand-indicator');
+    if (activeBadge) activeBadge.classList.remove('hidden');
+  }
+
+  // 2. Smoothly update 8 grid images
+  const gridContainer = document.getElementById('ambassador-content-grid');
+  if (!gridContainer || !ambassadorData[brandKey]) return;
+
+  gridContainer.style.opacity = '0';
+  gridContainer.style.transform = 'translateY(6px)';
+
+  setTimeout(() => {
+    const items = ambassadorData[brandKey];
+    items.forEach((item, index) => {
+      const img = document.getElementById('ambassador-img-' + index);
+      if (img) {
+        img.src = item.src;
+        img.alt = item.alt;
+      }
+    });
+    gridContainer.style.opacity = '1';
+    gridContainer.style.transform = 'translateY(0)';
+  }, 160);
+}
+
+window.selectAmbassadorBrand = selectAmbassadorBrand;
+window.ambassadorData = ambassadorData;
+

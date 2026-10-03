@@ -5019,4 +5019,121 @@ html {
   box-shadow: 0 0 25px rgba(225, 48, 108, 0.7), 0 0 45px rgba(131, 58, 180, 0.45);
   transform: translateY(-2px) scale(1.08);
 }
+
+/* ===== Experience Media Grid (Sertifikat & Foto Dokumentasi) ===== */
+.experience-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .experience-media-grid {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+}
+
+.exp-media-card {
+  background: #0b0f14;
+  border: 1px solid #334155;
+  border-radius: 0.875rem;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-media-card:hover {
+  transform: translateY(-2px);
+  border-color: #00ff88;
+  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.16), 0 0 1px rgba(0, 255, 136, 0.5);
+}
+
+.exp-media-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  background: #111827;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.exp-media-icon {
+  color: #00ff88;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-media-title {
+  color: #f1f5f9;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.exp-media-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+  background: #050810;
+}
+
+@media (max-width: 640px) {
+  .exp-media-img-wrapper {
+    height: 180px;
+  }
+}
+
+.exp-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.exp-media-card:hover .exp-media-img {
+  transform: scale(1.04);
+}
+
+.exp-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 16, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.exp-media-card:hover .exp-media-overlay {
+  opacity: 1;
+}
+
+.exp-media-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(11, 15, 20, 0.9);
+  border: 1px solid #00ff88;
+  border-radius: 9999px;
+  color: #00ff88;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.3);
+}
+
 

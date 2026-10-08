@@ -42,8 +42,8 @@ router.post('/', rateLimit, async (req: Request, res: Response): Promise<void> =
         console.error('[aiInsights] Error:', err.message);
         res.status(500).json({
             error: 'Internal server error',
-            message: 'Gagal menghasilkan insights.',
-            details: err.message, // Send detailed error for debugging
+            message: 'Gagal menghasilkan insights. Silakan coba beberapa saat lagi.',
+            ...(process.env.NODE_ENV === 'development' ? { details: err.message } : {}),
         });
     }
 });

@@ -1198,6 +1198,7 @@ function openProjectModal(projectId) {
         <a 
           href="${project.github}" 
           target="_blank"
+          rel="noopener noreferrer"
           class="flex-1 px-6 py-3 rounded-lg text-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2"
           style="background-color: #00ff88; color: #0b0f14;">
           <i class="fab fa-github mr-2"></i>View on GitHub
@@ -1227,6 +1228,7 @@ function openProjectModal(projectId) {
           <a 
             href="${project.demo}" 
             target="_blank"
+            rel="noopener noreferrer"
             class="flex-1 px-6 py-3 rounded-lg text-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2"
             style="background-color: #0b0f14; color: #94a3b8; border: 1px solid #334155;">
             <i class="fas fa-external-link-alt mr-2"></i>Live Demo
@@ -2289,6 +2291,17 @@ function closeCrudSimulator() {
   }
 }
 
+// --- Security Utility: HTML Escaping to prevent XSS ---
+function escapeHtml(text) {
+  if (text === null || text === undefined) return '';
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 function renderStudents(filterText = "") {
   const list = document.getElementById('studentList');
   const countSpan = document.getElementById('studentCount');
@@ -2314,7 +2327,11 @@ function renderStudents(filterText = "") {
   }
 
   filtered.forEach(s => {
-    const initial = s.name.charAt(0).toUpperCase();
+    const safeName = escapeHtml(s.name);
+    const safeNim = escapeHtml(s.nim);
+    const safeMajor = escapeHtml(s.major);
+    const initial = safeName.charAt(0).toUpperCase() || '?';
+    const safeId = parseInt(s.id, 10);
     const item = document.createElement('div');
     item.className = "bg-[#0b0f14] p-4 rounded-xl border border-[#334155] flex items-center justify-between hover:border-[#38bdf8] transition-colors group";
     item.innerHTML = `
@@ -2323,22 +2340,22 @@ function renderStudents(filterText = "") {
           ${initial}
         </div>
         <div>
-          <h4 class="text-white font-medium group-hover:text-[#38bdf8] transition-colors">${s.name}</h4>
+          <h4 class="text-white font-medium group-hover:text-[#38bdf8] transition-colors">${safeName}</h4>
           <div class="flex flex-col sm:flex-row sm:gap-4 text-xs text-[#94a3b8] mt-0.5">
-            <span class="flex items-center gap-1"><i class="fas fa-id-card"></i> ${s.nim}</span>
-            <span class="flex items-center gap-1"><i class="fas fa-graduation-cap"></i> ${s.major}</span>
+            <span class="flex items-center gap-1"><i class="fas fa-id-card"></i> ${safeNim}</span>
+            <span class="flex items-center gap-1"><i class="fas fa-graduation-cap"></i> ${safeMajor}</span>
           </div>
         </div>
       </div>
       <div class="relative">
-        <button onclick="toggleMenu(${s.id})" class="text-[#94a3b8] hover:text-white p-2 rounded-lg hover:bg-[#334155]/50 transition-colors">
+        <button onclick="toggleMenu(${safeId})" class="text-[#94a3b8] hover:text-white p-2 rounded-lg hover:bg-[#334155]/50 transition-colors">
           <i class="fas fa-ellipsis-v"></i>
         </button>
-        <div id="menu-${s.id}" class="hidden absolute right-0 top-full mt-2 w-32 bg-[#1e293b] border border-[#334155] rounded-lg shadow-xl z-10 overflow-hidden">
-          <button onclick="editStudent(${s.id})" class="w-full text-left px-4 py-2 text-sm text-[#94a3b8] hover:bg-[#334155]/50 hover:text-[#38bdf8] transition-colors border-b border-[#334155]">
+        <div id="menu-${safeId}" class="hidden absolute right-0 top-full mt-2 w-32 bg-[#1e293b] border border-[#334155] rounded-lg shadow-xl z-10 overflow-hidden">
+          <button onclick="editStudent(${safeId})" class="w-full text-left px-4 py-2 text-sm text-[#94a3b8] hover:bg-[#334155]/50 hover:text-[#38bdf8] transition-colors border-b border-[#334155]">
             <i class="fas fa-edit mr-2"></i> Edit
           </button>
-          <button onclick="deleteStudent(${s.id})" class="w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-red-500/10 transition-colors">
+          <button onclick="deleteStudent(${safeId})" class="w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-red-500/10 transition-colors">
             <i class="fas fa-trash-alt mr-2"></i> Hapus
           </button>
         </div>
@@ -2415,13 +2432,18 @@ function closeStudentForm() {
 function saveStudent(e) {
   e.preventDefault();
   const idStr = document.getElementById('studentId').value;
-  const name = document.getElementById('studentName').value;
-  const nim = document.getElementById('studentNim').value;
-  const major = document.getElementById('studentMajor').value;
+  const rawName = document.getElementById('studentName').value.trim();
+  const rawNim = document.getElementById('studentNim').value.trim();
+  const rawMajor = document.getElementById('studentMajor').value.trim();
+
+  // Sanitize user inputs to prevent XSS
+  const name = escapeHtml(rawName);
+  const nim = escapeHtml(rawNim);
+  const major = escapeHtml(rawMajor);
 
   if (idStr) {
     // Edit
-    const id = parseInt(idStr);
+    const id = parseInt(idStr, 10);
     const index = students.findIndex(s => s.id === id);
     if (index !== -1) {
       students[index] = { id, name, nim, major };

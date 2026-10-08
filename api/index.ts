@@ -6,9 +6,35 @@ import aiInsightsRouter from '../server/routes/aiInsights.js';
 const app = express();
 const PORT = parseInt(process.env.PORT || '5174', 10);
 
+// Security hardening
+app.disable('x-powered-by');
+
+const defaultOrigins = [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'http://localhost:3000',
+    'https://dashboard-portofolio-ten.vercel.app',
+];
+
 // Middleware
 app.use(cors({
-    origin: true, // allow all origins in dev
+    origin: (origin, callback) => {
+        // allow server-to-server, curl, or same-origin requests with no origin header
+        if (!origin) return callback(null, true);
+
+        const envOrigins = (process.env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
+        const whitelist = [...defaultOrigins, ...envOrigins];
+
+        const isAllowed = whitelist.includes(origin) ||
+            /^https:\/\/[a-zA-Z0-9_-]+\.vercel\.app$/.test(origin) ||
+            /^http:\/\/localhost:\d+$/.test(origin);
+
+        if (isAllowed) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS policy'));
+        }
+    },
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 }));

@@ -2699,7 +2699,7 @@ function updateRunButton(status) {
 async function runPipeline() {
   const btn = document.getElementById('btnRunPipeline');
   if (!btn) return;
-  
+
   if (typeof pipelineState === 'undefined' || pipelineState.isRunning) return;
 
   try {
@@ -3085,3 +3085,9 @@ function selectAmbassadorBrand(brandKey) {
 window.selectAmbassadorBrand = selectAmbassadorBrand;
 window.ambassadorData = ambassadorData;
 
+// Pasang di website portofolio Anda:
+fetch('https://dashboard-portofolio-ten.vercel.app/api/log-visitor', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ path: '/portfolio', referrer: document.referrer || 'Direct' })
+}).catch(() => { });
